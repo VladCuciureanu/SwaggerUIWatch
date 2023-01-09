@@ -8,7 +8,7 @@ var path = require("path");
 var swaggerFileValue;
 var targetDirValue;
 var swaggerUIOptions = {};
-var help = 'Enter "swagger-ui-watcher --help" for more details.';
+var help = 'Enter "swagger-ui-watch --help" for more details.';
 
 /*
  * NOTE: the '--no-open' option will set its inverse counterpart `program.open`;
