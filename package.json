@@ -1,34 +1,68 @@
 {
   "name": "swagger-ui-watch",
   "version": "1.0.0",
+  "description": "Hot-reloading Swagger UI server. See live updates to your OpenAPI specifications!",
   "author": {
     "name": "Vlad Cuciureanu",
     "email": "vlad.cuciureanu@pm.me"
   },
   "license": "MIT",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/VladCuciureanu/SwaggerUIWatch.git"
   },
+  "keywords": [
+    "cli",
+    "command-line",
+    "command-line-tool",
+    "swagger-ui",
+    "openapi"
+  ],
+  "exports": "./dist/index.js",
+  "bin": {
+    "swagger-ui-watch": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">=14.16"
+  },
+  "type": "module",
   "scripts": {
-    "format": "prettier --write \"**/*.js\""
+    "typecheck": "tsc",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist node_modules",
+    "start": "node dist/index.js",
+    "lint": "eslint src --report-unused-disable-directives",
+    "format": "prettier --write --plugin-search-dir=. **/*.{cjs,ts,md,json} --ignore-path ../.gitignore",
+    "format:check": "prettier --check --plugin-search-dir=. **/*.{cjs,ts,ts,md,json} --ignore-path ../.gitignore",
+    "release": "changeset version",
+    "pub:release": "pnpm build && npm publish"
   },
   "dependencies": {
     "@apidevtools/swagger-parser": "^10.1.0",
+    "chalk": "^5.2.0",
     "chokidar": "^3.4.0",
     "commander": "^5.1.0",
     "express": "^4.17.1",
+    "fs-extra": "^11.1.0",
     "open": "^7.0.4",
     "openapi-types": "^12.1.0",
     "path": "^0.12.7",
     "socket.io": "^4.5.4",
     "swagger-editor-dist": "^3.11.1"
   },
-  "bin": {
-    "swagger-ui-watch": "bin/swagger-ui-watch.js"
-  },
   "devDependencies": {
-    "prettier": "^2.8.2"
+    "@types/express": "^4.17.15",
+    "@types/fs-extra": "^11.0.0",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.2",
+    "tsup": "^6.2.3",
+    "type-fest": "^3.5.1",
+    "typescript": "^4.9.3"
   }
 }

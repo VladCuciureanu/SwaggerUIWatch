@@ -11,11 +11,6 @@ Swagger UI Watch detects changes in your local Swagger files and reload Swagger 
 
 ## Installation
 
-| Version | Swagger Version |
-| ------- | --------------- |
-| 1.0.10  | 2               |
-| >=2.0   | 3               |
-
 ```sh
 npm install swagger-ui-watch -g
 ```
