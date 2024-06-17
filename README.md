@@ -1,6 +1,6 @@
 # ⏱️ SwaggerUIWatch
 
-this is my all-in-one solution for effortless Swagger specification editing and management, with support for multi-file specs, streamlined bundling, and freedom to use your preferred editor.
+This is my all-in-one solution for effortless Swagger specification editing and management, with support for multi-file specs, streamlined bundling, and freedom to use your preferred editor.
 
 ## Motivation
 
