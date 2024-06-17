@@ -1,11 +1,6 @@
-<div align="center">
-  <div>&nbsp;</div>
-  <img src="public/swagger-ui-watch-logo.png" width="400"/> 
-</div>
+# ⏱️ SwaggerUIWatch
 
-## Introduction
-
-SwaggerUIWatch is my all-in-one solution for effortless Swagger specification editing and management, with support for multi-file specs, streamlined bundling, and freedom to use your preferred editor.
+this is my all-in-one solution for effortless Swagger specification editing and management, with support for multi-file specs, streamlined bundling, and freedom to use your preferred editor.
 
 ## Motivation
 
